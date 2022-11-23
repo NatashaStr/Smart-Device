@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание проекта">
+  <title>SmartDevice</title>
+  <link rel="preload" href="./fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./webmanifest">
+  <link rel="mask-icon" href="./img/favicons//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a class="header__link">
+            <img class="header__image-tablet" src="./img/svg/logo-tablet.svg" width="215" height="55"
+              alt="Логотип магазина Смарт Девайс">
+            <img class="header__image-mobile" src="./img/svg/logo-mobile.svg" width="35" height="35"
+              alt="Логотип магазина Смарт Девайс">
+          </a>
+          <address class="header__address">
+            <a class="header__mail" href="mailto:info@sd.ru">
+              <svg width="21" height="20" role="img" aria-label="Напишите нам на почту.">
+                <use href="./img/sprite_auto.svg#mail"></use>
+              </svg>
+              <span class="header__mail-text">info@sd.ru</span>
+            </a>
+            <a class="header__phone" href="tel:+74950005252">
+              <svg width="21" height="20" role="img" aria-label="Повоните нам.">
+                <use href="./img/sprite_auto.svg#phone"></use>
+              </svg>
+              <span class="header__phone-text">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
+            </a>
+
+          </address>
+          <button class="header__button" data-open-modal="feedback">Заказать звонок</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Smart Device — интернет-магазин печатных плат
+      </h1>
+      <section class="promo">
+        <div class="container">
+          <div class="promo__wrapper">
+            <h2 class="promo__title">Печатные платы</h2>
+            <p class="promo__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+            <button class="promo__button" type="button">
+              <span class="promo__button-text-desktop">Получить бесплатную консультацию</span>
+              <span class="promo__button-text-mobile">бесплатная консультация</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="container">
+          <h2 class="advantages__title visually-hidden">Преимущества работы с&nbsp;нами</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                <path
+                  d="M3.848 11.662 2.054 10.19c-.975-.799-.975-2.1 0-2.9.975-.8 2.56-.8 3.535 0l1.916 1.572C9.503 7.72 11.78 6.93 14.167 6.55V4.51H12.5c-.46 0-.833-.305-.833-.683V2.051C11.667.92 12.788 0 14.167 0h6.666c1.379 0 2.5.92 2.5 2.05v1.778c0 .378-.373.684-.833.684h-1.667V6.55c2.386.379 4.664 1.17 6.662 2.31l1.916-1.57c.974-.8 2.56-.8 3.535 0 .975.799.975 2.1 0 2.9l-1.794 1.471C33.639 14.203 35 17.368 35 20.644 35 28.56 27.15 35 17.5 35S0 28.56 0 20.645c0-3.277 1.361-6.442 3.848-8.983Zm.563-3.405a.969.969 0 0 0-1.179 0c-.324.267-.324.7 0 .967l1.722 1.412c.388-.327.795-.638 1.219-.934L4.41 8.257Zm17.256-6.206c0-.377-.374-.684-.834-.684h-6.666c-.46 0-.834.307-.834.684v1.094h8.334V2.05Zm-5.834 2.46v1.843a21.842 21.842 0 0 1 3.334 0V4.512h-3.334Zm15.935 3.746a.969.969 0 0 0-1.179 0l-1.761 1.445c.423.296.83.607 1.218.934l1.722-1.412c.324-.267.324-.7 0-.967ZM17.5 33.633c8.73 0 15.833-5.827 15.833-12.989 0-3.159-1.398-6.202-3.936-8.57-.7-.653-1.48-1.25-2.32-1.773-2.103-1.313-4.593-2.178-7.2-2.5a19.562 19.562 0 0 0-4.753 0c-2.608.322-5.098 1.187-7.202 2.5-.84.524-1.62 1.12-2.319 1.772-2.538 2.368-3.936 5.412-3.936 8.572 0 7.161 7.103 12.988 15.833 12.988Z" />
+                <path
+                  d="M17.5 22.695c-1.379 0-2.5-.92-2.5-2.05 0-.892.697-1.651 1.667-1.934V13.81c0-.378.373-.684.833-.684.46 0 .833.306.833.684v4.902c.97.283 1.667 1.043 1.667 1.934 0 1.13-1.121 2.05-2.5 2.05Zm0-2.734c-.46 0-.833.306-.833.684 0 .377.373.683.833.683.46 0 .833-.306.833-.683 0-.378-.373-.684-.833-.684Z" />
+                <path
+                  d="M8.623 13.433a.596.596 0 0 1 .04-.037l.05-.037c1.468-1.192 3.283-2.074 5.252-2.55.441-.108.905.1 1.035.461.13.362-.122.742-.563.85a11.75 11.75 0 0 0-3.98 1.78l.562.46c.325.268.325.7 0 .968a.932.932 0 0 1-.59.2.932.932 0 0 1-.59-.2l-.563-.462C7.77 16.303 6.873 18.074 6.7 19.96H7.5c.46 0 .833.306.833.684 0 .377-.373.683-.833.683h-.801c.174 1.887 1.07 3.657 2.577 5.096l.564-.463a.968.968 0 0 1 1.179 0c.325.267.325.7 0 .967l-.564.462c1.753 1.237 3.912 1.972 6.212 2.115v-.657c0-.378.373-.684.833-.684.46 0 .833.306.833.684v.657c2.3-.143 4.459-.878 6.212-2.115l-.564-.462c-.325-.267-.325-.7 0-.967a.968.968 0 0 1 1.18 0l.563.463c1.508-1.439 2.403-3.21 2.577-5.096H27.5c-.46 0-.833-.306-.833-.683 0-.378.373-.684.833-.684h.801c-.174-1.887-1.07-3.657-2.577-5.095l-.564.462a.932.932 0 0 1-.589.2.932.932 0 0 1-.59-.2c-.325-.267-.325-.7 0-.967l.563-.461a11.745 11.745 0 0 0-3.98-1.78c-.442-.107-.694-.488-.564-.85s.593-.568 1.035-.462c1.97.477 3.783 1.359 5.252 2.55a.786.786 0 0 1 .05.037l.04.037C28.714 15.367 30 17.926 30 20.645c0 2.718-1.286 5.277-3.623 7.211a.58.58 0 0 1-.04.037l-.045.033c-2.358 1.917-5.478 2.972-8.792 2.972s-6.433-1.055-8.792-2.971l-.045-.034c-.014-.011-.027-.024-.04-.036C6.286 25.922 5 23.363 5 20.645c0-2.719 1.286-5.278 3.623-7.212Z" />
+                <path
+                  d="M17.5 11.758c-.46 0-.833-.306-.833-.684 0-.377.373-.683.833-.683.46 0 .833.306.833.683 0 .377-.373.684-.833.684Z" />
+              </svg>
+              <h3 class="advantages__item-title">Оперативные сроки</h3>
+              <p class="advantages__item-description">Усовершенствованная логистическая система позволяет нам
+                просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые
+                короткие сроки
+              </p>
+            </li>
+            <li class="advantages__item">
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.2638 27.8931C31.639 27.3746 31.8609 26.7384 31.8609 26.0511V21.9434C31.8609 21.5658 31.5548 21.2598 31.1773 21.2598H28.1222C26.7099 21.2598 25.5609 22.4087 25.5609 23.8211V26.0511C25.5609 26.738 25.7826 27.3738 26.1573 27.8921C25.69 27.9679 25.2404 28.1176 24.8211 28.3367C23.8713 26.9195 22.3152 25.9421 20.5271 25.7772C20.5201 25.7752 20.513 25.7738 20.506 25.7721C21.1457 25.0577 21.5357 24.1151 21.5357 23.0829V17.5C21.5357 17.1225 21.2296 16.8164 20.8521 16.8164H16.6999C14.9157 16.8164 13.4643 18.2679 13.4643 20.052V23.0828C13.4643 24.1151 13.8543 25.0576 14.494 25.772C14.487 25.7737 14.4799 25.7752 14.4729 25.7772C12.6846 25.942 11.1284 26.9196 10.1787 28.337C9.75926 28.1179 9.30959 27.9681 8.84249 27.8923C9.21724 27.374 9.43906 26.7381 9.43906 26.0511V21.9434C9.43906 21.5658 9.13295 21.2598 8.75547 21.2598H5.70035C4.28805 21.2598 3.13906 22.4087 3.13906 23.8211V26.0511C3.13906 26.7385 3.36103 27.3746 3.73618 27.8931C1.62025 28.2389 0 30.0791 0 32.2913V34.3164C0 34.694 0.306113 35 0.683594 35H34.3164C34.6939 35 35 34.694 35 34.3164V32.2913C35 30.0791 33.3797 28.2389 31.2638 27.8931ZM4.50625 23.8211C4.50625 23.1626 5.04191 22.627 5.70035 22.627H8.07188V23.4595C8.07188 23.8677 7.73979 24.1998 7.33161 24.1998H4.50625V23.8211ZM4.50625 25.567H7.33161C7.59206 25.567 7.84144 25.5192 8.07188 25.4324V26.0511C8.07188 27.0341 7.27214 27.8339 6.28906 27.8339C5.30599 27.8339 4.50625 27.0341 4.50625 26.0511V25.567ZM6.72978 29.2011L6.28906 29.6418L5.84835 29.2011H6.72978ZM9.19789 31.564V33.6328H1.36719V32.2913C1.36719 30.758 2.48985 29.4826 3.95616 29.2424L5.80569 31.0919C5.93394 31.2201 6.10777 31.2921 6.28906 31.2921C6.47035 31.2921 6.64419 31.2201 6.77243 31.0919L8.62251 29.2417C8.94927 29.2949 9.26352 29.4003 9.55637 29.5544C9.32477 30.1809 9.19789 30.8579 9.19789 31.564ZM17.5001 25.7515C16.0286 25.7515 14.8315 24.5543 14.8315 23.0829V22.1794H18.917C19.37 22.1794 19.7965 22.0637 20.1686 21.8604V23.0829C20.1686 24.5543 18.9715 25.7515 17.5001 25.7515ZM18.6916 27.1186L17.5 28.3102L16.3084 27.1186H18.6916ZM14.8314 20.052H14.8315C14.8315 19.0217 15.6696 18.1836 16.6999 18.1836H20.1685V19.5606C20.1685 20.2508 19.607 20.8123 18.9169 20.8123H14.8314V20.052ZM24.4349 33.6328H23.1055H11.8945H10.5651V32.2656H15.0163C15.3938 32.2656 15.6999 31.9596 15.6999 31.582C15.6999 31.2045 15.3938 30.8984 15.0163 30.8984H10.6151C10.9081 28.9556 12.4633 27.422 14.4158 27.1595L17.0166 29.7603C17.1501 29.8938 17.3251 29.9605 17.5 29.9605C17.6749 29.9605 17.8499 29.8938 17.9834 29.7603L20.5842 27.1595C22.755 27.4513 24.4349 29.3145 24.4349 31.564V33.6328ZM26.9281 23.8211C26.9281 23.1626 27.4638 22.627 28.1222 22.627H30.4937V23.4595C30.4937 23.8677 30.1617 24.1998 29.7535 24.1998H26.9281V23.8211ZM26.9281 25.567H29.7535C30.0139 25.567 30.2633 25.5192 30.4937 25.4324V26.0511C30.4937 27.0341 29.694 27.8339 28.7109 27.8339C27.7279 27.8339 26.9281 27.0341 26.9281 26.0511V25.567ZM29.1516 29.2011L28.7109 29.6418L28.2702 29.2011H29.1516ZM25.802 33.6328V31.564C25.802 30.8578 25.6752 30.1809 25.4435 29.5542C25.7362 29.4 26.0504 29.2947 26.3772 29.2416L28.2275 31.0919C28.3557 31.2201 28.5296 31.2921 28.7109 31.2921C28.8922 31.2921 29.066 31.2201 29.1942 31.0919L31.0438 29.2424C32.5101 29.4826 33.6327 30.758 33.6327 32.2913V33.6328H25.802Z">
+                </path>
+                <path
+                  d="M20.869 4.4665C20.602 4.19956 20.1693 4.19956 19.9022 4.4665L16.5478 7.82097L15.0977 6.37086C14.8307 6.10385 14.398 6.10385 14.131 6.37079C13.8641 6.63773 13.8641 7.07059 14.131 7.3376L16.0645 9.27107C16.1927 9.39925 16.3665 9.4713 16.5478 9.4713C16.7291 9.4713 16.903 9.39925 17.0312 9.27107L20.869 5.43324C21.136 5.1663 21.136 4.73345 20.869 4.4665Z">
+                </path>
+                <path
+                  d="M20.295 0.592814C19.9503 0.439074 19.5461 0.593908 19.3923 0.938712C19.2385 1.28352 19.3934 1.68773 19.7382 1.84147C21.7205 2.72556 23.0015 4.69889 23.0015 6.86875C23.0015 9.90227 20.5335 12.3702 17.5 12.3702C14.4664 12.3702 11.9985 9.90227 11.9985 6.86875C11.9985 4.7101 13.2702 2.74087 15.2382 1.85199C15.5823 1.69661 15.7353 1.29165 15.5798 0.947599C15.4244 0.603478 15.0193 0.450558 14.6755 0.605939C12.2188 1.71555 10.6313 4.17382 10.6313 6.86868C10.6313 10.6561 13.7126 13.7374 17.5 13.7374C21.2873 13.7374 24.3686 10.6561 24.3686 6.86875C24.3686 4.15987 22.7696 1.69641 20.295 0.592814Z">
+                </path>
+                <path
+                  d="M17.5245 0H17.5C17.1225 0 16.8164 0.306045 16.8164 0.683594C16.8164 1.06114 17.1225 1.36719 17.5 1.36719H17.518C17.5191 1.36719 17.5202 1.36719 17.5213 1.36719C17.8974 1.36719 18.2031 1.06326 18.2049 0.686807C18.2066 0.309258 17.902 0.00177734 17.5245 0Z">
+                </path>
+                <path
+                  d="M17.9832 31.0987C17.8562 30.9716 17.6798 30.8984 17.5 30.8984C17.3202 30.8984 17.1438 30.9716 17.0167 31.0987C16.8896 31.2259 16.8164 31.4022 16.8164 31.582C16.8164 31.7618 16.8895 31.9382 17.0167 32.0653C17.1439 32.1925 17.3202 32.2656 17.5 32.2656C17.6798 32.2656 17.8562 32.1925 17.9832 32.0653C18.1104 31.9382 18.1836 31.7618 18.1836 31.582C18.1836 31.4022 18.1104 31.2259 17.9832 31.0987Z">
+                </path>
+              </svg>
+              <h3 class="advantages__item-title">Крупные поставщики</h3>
+              <p class="advantages__item-description">Нашими поставщиками являются такие крупные мировые компании как:
+                OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество
+                нашей продукции.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                <path
+                  d="M17.5 11.017c-.377 0-.684.358-.684.8 0 .44.307.8.684.8.377 0 .684-.36.684-.8 0-.442-.307-.8-.684-.8Z" />
+                <path
+                  d="M32.95 15.814h-2.66C28.886 11.132 26.852 2.922 23.166.598c-1.843-1.16-3.586-.35-4.24 1.297-.28.7-.836 1.068-1.427 1.068-.599 0-1.15-.376-1.426-1.067C15.442.305 13.74-.58 11.962.429 8.218 2.556 6.124 11.096 4.711 15.814H2.05C.918 15.814 0 16.887 0 18.212c0 1.322.92 2.398 2.05 2.398h30.9c1.132 0 2.05-1.073 2.05-2.398 0-1.322-.92-2.398-2.05-2.398ZM7.111 12.616h7.654c.377 0 .683-.358.683-.8 0-.44-.306-.799-.683-.799H7.59c2.06-6.656 3.986-8.59 4.97-9.15 1.073-.608 1.956-.099 2.274.703.502 1.26 1.54 1.992 2.666 1.992 1.13 0 2.166-.735 2.666-1.992.327-.824 1.215-1.28 2.352-.565.989.624 2.908 2.622 4.892 9.012h-7.176c-.377 0-.683.358-.683.8 0 .441.306.8.683.8h7.654c.346 1.165.705 2.367.953 3.197H6.159c.248-.828.606-2.027.953-3.198Zm25.837 6.396H2.051c-.377 0-.684-.36-.684-.8 0-.441.306-.8.684-.8h30.898c.377 0 .684.36.684.8 0 .441-.306.8-.684.8ZM16.133 23.808H5.195c-.377 0-.683.358-.683.8v3.197c0 3.967 2.76 7.195 6.152 7.195 2.57 0 4.846-1.849 5.75-4.634a2.28 2.28 0 0 1 2.171 0C19.49 33.15 21.765 35 24.335 35c3.393 0 6.153-3.228 6.153-7.195v-3.198c0-.441-.306-.8-.683-.8H18.867c-.377 0-.683.359-.683.8v.8h-1.368v-.8c0-.441-.306-.799-.683-.799Zm-5.469 9.593c-2.638 0-4.785-2.51-4.785-5.596v-2.398h9.57v2.398c0 3.094-2.135 5.596-4.785 5.596Zm8.887-7.994h9.57v2.398c0 3.086-2.146 5.596-4.785 5.596-2.657 0-4.785-2.51-4.785-5.596v-2.398Zm-1.367 1.599v.8c0 .255.012.51.035.762a3.432 3.432 0 0 0-1.438 0 8.52 8.52 0 0 0 .035-.763v-.8h1.368Z" />
+                <path
+                  d="M10.664 30.203c-1.13 0-2.05-1.076-2.05-2.398 0-.442-.307-.8-.684-.8-.378 0-.684.358-.684.8 0 2.204 1.533 3.997 3.418 3.997.378 0 .684-.358.684-.8 0-.44-.306-.799-.684-.799ZM24.336 31.802c1.885 0 3.418-1.793 3.418-3.997 0-.442-.306-.8-.684-.8-.377 0-.683.358-.683.8 0 1.322-.92 2.398-2.051 2.398-.378 0-.684.358-.684.8 0 .441.306.8.684.8Z" />
+              </svg>
+              <h3 class="advantages__item-title">Полная конфиденциальность</h3>
+              <p class="advantages__item-description">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную
+                конфиденциальность.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+                <path
+                  d="M11.07 8.585a.689.689 0 0 0-.482-.2.689.689 0 0 0-.484.2.69.69 0 0 0-.2.483c0 .18.073.356.2.483.127.128.304.2.484.2s.356-.072.483-.2a.69.69 0 0 0 .2-.483.69.69 0 0 0-.2-.483Z" />
+                <path
+                  d="m34.8 2.859-.845-.847.845-.845A.684.684 0 0 0 33.833.2l-.844.845-.833-.834a.683.683 0 0 0-.484-.2L20.102.003H20.1c-.913 0-1.772.356-2.418 1.002L11.908 6.78a.684.684 0 0 0 .967.967l5.774-5.774A2.04 2.04 0 0 1 20.1 1.37h.002l11.286.007.634.634-2.537 2.537a2.805 2.805 0 0 0-3.419.422 2.783 2.783 0 0 0-.82 1.98c0 .748.291 1.452.82 1.98a2.792 2.792 0 0 0 1.98.82c.717 0 1.434-.273 1.98-.82a2.806 2.806 0 0 0 .425-3.415l2.537-2.537.645.646-.007 11.273a2.04 2.04 0 0 1-.601 1.451L16.344 33.033a2.04 2.04 0 0 1-1.452.601 2.04 2.04 0 0 1-1.452-.601L1.97 21.559a2.04 2.04 0 0 1-.602-1.452c0-.548.214-1.064.602-1.452l7.368-7.37a.684.684 0 0 0-.966-.966L1 17.689A3.399 3.399 0 0 0 0 20.106c0 .914.356 1.773 1.002 2.42L12.473 34a3.41 3.41 0 0 0 2.419 1 3.41 3.41 0 0 0 2.419-1l16.68-16.684a3.4 3.4 0 0 0 1.003-2.417L35 3.342a.683.683 0 0 0-.2-.483Zm-5.74 5.106c-.271.27-.631.42-1.014.42s-.742-.15-1.013-.42a1.435 1.435 0 0 1 1.013-2.447c.139 0 .277.02.41.06l-.789.789a.684.684 0 0 0 .967.967l.787-.787a1.434 1.434 0 0 1-.361 1.418Z" />
+                <path
+                  d="m29.2 13.764-7.966-7.967a2.71 2.71 0 0 0-3.828 0L4.799 18.406a2.69 2.69 0 0 0-.793 1.914c0 .723.282 1.403.793 1.914l7.967 7.968c.51.51 1.19.793 1.914.793.723 0 1.402-.282 1.913-.793L29.2 17.592a2.69 2.69 0 0 0 .793-1.913 2.69 2.69 0 0 0-.793-1.915Zm-.966 2.862L15.627 29.235a1.33 1.33 0 0 1-.947.392 1.33 1.33 0 0 1-.947-.392l-7.967-7.968a1.33 1.33 0 0 1-.392-.947c0-.358.139-.695.392-.948L18.373 6.764c.261-.262.604-.392.947-.392.343 0 .686.13.947.392l7.966 7.967c.253.253.393.59.393.948 0 .357-.14.694-.393.947Z" />
+                <path
+                  d="M22.29 13.677a.684.684 0 0 0-.966-.967l-.394.394c-1.051-.65-2.4-.563-3.252.29a2.48 2.48 0 0 0-.716 1.9 2.876 2.876 0 0 0 .853 1.892c.55.55.611 1.384.137 1.859-.475.474-1.309.413-1.859-.137s-.61-1.384-.136-1.859a.684.684 0 0 0-.967-.967c-.853.853-.94 2.202-.29 3.253l-.468.467a.684.684 0 0 0 .968.967l.467-.467c.46.283.975.427 1.482.427.652 0 1.29-.238 1.77-.717 1.007-1.008.946-2.709-.137-3.792a1.512 1.512 0 0 1-.454-.991 1.13 1.13 0 0 1 .317-.868c.474-.475 1.308-.413 1.858.137s.611 1.384.137 1.858a.684.684 0 0 0 .966.967c.853-.852.94-2.201.29-3.252l.394-.394ZM15.372 25.012 11.86 21.5a.684.684 0 0 0-.967.967l3.51 3.512a.682.682 0 0 0 .968 0 .684.684 0 0 0 0-.967ZM9.988 19.627a.688.688 0 0 0-.483-.2.69.69 0 0 0-.484.2.689.689 0 0 0-.2.484c0 .18.073.356.2.483a.687.687 0 0 0 1.168-.483.688.688 0 0 0-.201-.484Z" />
+              </svg>
+              <h3 class="advantages__item-title">Персонализация стоимости</h3>
+              <p class="advantages__item-description">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки,
+                чтобы установить ту&nbsp;цену, которая Вас устраивает.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <div class="container">
+          <div class="about-us__wrapper">
+            <span class="about-us__year">2022</span>
+            <h2 class="about-us__title">О&nbsp;компании</h2>
+            <div class="about-us__text-wrapper about-us__text-wrapper--is-close">
+              <p class="about-us__text">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и
+                предоставляем
+                мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы
+                до&nbsp;10&nbsp;дней.</p>
+              <p class="about-us__text about-us__text--no-bottom">Наши поставщики&nbsp;&mdash; мировые производители
+                электронных компонентов:
+                OSRAM, CREE, HOLGLITRONIC, REFOND.
+              </p>
+              <p class="about-us__text"> Печатные платы и&nbsp;комплектующие Service Devices применяются
+                на&nbsp;предприятиях
+                Российских
+                Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+                крупнейшие Производители светотехники России.
+              </p>
+              <p class="about-us__text">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+                1&nbsp;000&nbsp;000
+                клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент
+                насчитывается более 14
+                офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
+              <p class="about-us__text">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества
+                продукции,
+                производимой внутри компании. Использование инновационных технологий помогает экономить деньги
+                и&nbsp;время
+                наших клиентов</p>
+            </div>
+            <button class="about-us__button" type="button">Подробнее</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog__wrapper">
+            <h2 class="catalog__title visually-hidden">Каталог товаров и&nbsp;услуг</h2>
+            <p class="catalog__text">Smart Device предлагает следующие товары и&nbsp;услуги</p>
+            <p class="catalog__text-mobile">Товары и&nbsp;услуги<br> Smart Device</p>
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <p class="catalog__item-title">Производство печатных плат</p>
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-1.webp 1x, ./img/bg-card-mobile-1@2x.webp 2x">
+                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-1.webp 1x, ./img/bg-card-tablet-1@2x.webp 2x">
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-1.webp 1x, ./img/bg-card-1@2x.webp 2x">
+                    <img class="catalog__image" src="./img/bg-card-1.jpg" srcset="./img/bg-card-1@2x.jpg 2x" width="350" height="650" alt="">
+                  </picture>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <p class="catalog__item-title">Монтаж печатных плат</p>
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-2.webp 1x, ./img/bg-card-mobile-2@2x.webp 2x">
+                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-2.webp 1x, ./img/bg-card-tablet-2@2x.webp 2x">
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-2.webp 1x, ./img/bg-card-2@2x.webp 2x">
+                    <img class="catalog__image" src="./img/bg-card-2.jpg" srcset="./img/bg-card-2@2x.jpg 2x" width="350" height="650" alt="">
+                  </picture>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <p class="catalog__item-title">Комплектующие для светотехники</p>
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-3.webp 1x, ./img/bg-card-mobile-3@2x.webp 2x">
+                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-3.webp 1x, ./img/bg-card-tablet-3@2x.webp 2x">
+                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-3.webp 1x, ./img/bg-card-3@2x.webp 2x">
+                    <img class="catalog__image" src="./img/bg-card-3.jpg" srcset="./img/bg-card-2@2x.jpg 2x" width="350" height="650" alt="">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="container">
+          <div class="form__wrapper">
+            <h2 class="form__title visually-hidden">Обратная связь</h2>
+            <img class="form__image" src="./img/paper_airplane.png" width="510" height="285" alt="Бумажный самолёт.">
+            <div class="form__user-wrapper">
+              <p class="form__text">Остались вопросы? Задайте их&nbsp;нам!</p>
+              <p class="form__description">Мы&nbsp;проконсультируем Вас бесплатно</p>
+              <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
+                <label>
+                  <input type="text" placeholder="Имя" required>
+                </label>
+                <label>
+                  <input type="tel" placeholder="Телефон" required>
+                </label>
+                <textarea placeholder="Ваш вопрос"></textarea>
+                <button class="form__button" type="submit">Задать вопрос</button>
+                <div class="form__agree-wrapper">
+                  <label for="agree">
+                    <input type="checkbox" id="agree" required checked>
+                    <span class="form__agree-text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__inner-wrapper">
+            <a class="footer__link" href="#">
+              <img class="footer__image" src="./img/svg/logo-tablet.svg" width="215" height="55"
+                alt="Логотип магазина Смарт Девайс">
+            </a>
+            <ul class="footer__socials-list">
+              <li class="footer__socials-item">
+                <a class="footer__socials-link" href="#">
+                  <svg width="30" height="30" role="img">
+                    <use href="./img/sprite_auto.svg#ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Одноклассники.</span>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link" href="#">
+                  <svg width="30" height="30" role="img">
+                    <use href="./img/sprite_auto.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">В контакте.</span>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link" href="#">
+                  <svg width="30" height="30" role="img">
+                    <use href="./img/sprite_auto.svg#pinterest"></use>
+                  </svg>
+                  <span class="visually-hidden">Пинтерест.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <nav class="footer__navigation accordion-section accordion-section--opened">
+            <div class="footer__navigation-wrapper">
+              <h3 class="footer__nav-title">Разделы сайта</h3>
+              <button class="footer__nav-button" type="button"></button>
+              <ul class="footer__nav-list accordion-body">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">О&nbsp;Компании</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Продукты</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Производство печатных<br> плат</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Комплектующие</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Доставка</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+          <div class="footer__contacts accordion-section accordion-section--opened">
+            <div class="footer__contacts-wrapper">
+              <h3 class="footer__contacts-title">Наш офис</h3>
+              <button class="footer__contacts-button" type="button"></button>
+              <address class="footer__contacts-address-wrapper accordion-body">
+                <p class="footer__contacts-address">г. Мытищи, Олимпийский проспект,<br> д.10</p>
+                <p class="footer__contacts-phone">+7 (495) 589-40-50</p>
+                <p class="footer__contacts-phone">+7 (925) 389-58-29</p>
+                <p class="footer__contacts-phone">+7 (925) 364-78-13</p>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Закажите звонок</p>
+        <p class="modal__text">Оставьте контакты, мы&nbsp;проконсультируем<br> вас бесплатно в удобное время</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+          <label>
+            <input type="text" placeholder="Имя" name="name" tabindex="0" autofocus>
+          </label>
+          <label>
+            <input type="tel" placeholder="Телефон" name="tel">
+          </label>
+          <textarea>Ваш вопрос</textarea>
+          <button type="submit">Отправить</button>
+          <label for="agreement">
+            <input type="checkbox" id="agreement" required checked>
+            <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

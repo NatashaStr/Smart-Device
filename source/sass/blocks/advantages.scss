@@ -1,0 +1,147 @@
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  max-width: 1222px;
+  margin: 0 auto;
+  margin-bottom: 95px;
+  padding: 0;
+
+  list-style-type: none;
+
+  @include vp-1023 {
+    padding-left: 26px;
+    margin-bottom: 46px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding-left: 16px;
+    margin-bottom: 18px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  max-width: 595px;
+  min-height: 300px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 100px 45px 0 45px;
+
+  border: 1px solid $color-whisper;
+  border-left: 5px solid $color-deep-sky-blue;
+
+  @include hover {
+    color: $color-default-white;
+
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    // width: 320px;
+    min-height: 360px;
+    padding: 90px 45px 30px 40px;
+  }
+
+  @include vp-767 {
+    min-height: 270px;
+    padding: 76px 0 76px 26px;
+    margin-right: 0;
+  }
+}
+
+.advantages__item svg {
+  position: absolute;
+  content: "";
+  top: 43px;
+  left: 45px;
+
+  fill: $color-deep-sky-blue;
+
+  @include vp-767 {
+    top: 26px;
+    left: 24px;
+  }
+}
+
+.advantages__item:hover svg {
+  fill: $color-default-white;
+}
+
+.advantages__item:hover .advantages__item-title,
+.advantages__item:hover .advantages__item-description {
+  color: $color-default-white;
+}
+
+.advantages__item:first-child {
+  @include vp-767 {
+    margin-right: 14px;
+    padding-right: 24px;
+  }
+}
+
+.advantages__item:nth-child(2n) {
+  margin-right: 0;
+
+  @include vp-767 {
+    padding-right: 41px;
+    padding-bottom: 58px;
+    margin-right: 0;
+  }
+}
+
+.advantages__item:nth-child(3n) {
+  @include vp-767 {
+    margin-right: 14px;
+    padding-right: 10px;
+    padding-bottom: 120px;
+  }
+}
+
+.advantages__item:nth-child(4n) {
+  @include vp-767 {
+    padding-right: 48px;
+    padding-bottom: 63px;
+  }
+}
+
+.advantages__item-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  font-family: $ff-title;
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantages__item:nth-child(3n) .advantages__item-title,
+.advantages__item:nth-child(4n) .advantages__item-title {
+  @include vp-767 {
+    margin-bottom: 13px;
+  }
+}
+
+.advantages__item-description {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

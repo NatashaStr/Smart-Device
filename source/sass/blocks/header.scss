@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  background: linear-gradient(#041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.header__wrapper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 9px 35px 9px;
+  max-width: 1240px;
+
+  @include vp-1023 {
+    padding: 20px 36px 35px 26px;
+  }
+
+  @include vp-767 {
+    padding: 16px 44px 16px 18px;
+  }
+}
+
+.header__image-tablet {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header__link {
+  cursor: pointer;
+}
+
+.header__image-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.header__address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: calc(480 / 1222 * 100%);
+
+  @include vp-1023 {
+    display: block;
+    min-width: auto;
+    width: 100px;
+  }
+}
+
+.header__mail,
+.header__phone {
+  font-style: normal;
+
+  color: $color-default-white;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    &.focus-visible:focus {
+      color: rgba($color-default-white, 0.6);
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      color: rgba($color-default-white, 0.3);
+    }
+  }
+}
+
+.header__mail {
+  min-width: 135px;
+  margin-right: 10px;
+
+  @include vp-1023 {
+    margin-right: 28px;
+  }
+}
+
+.header__phone {
+  min-width: 227px;
+}
+
+.header__button {
+  padding: 10px 15px;
+  margin-right: 63px;
+
+  font-family: $ff-title;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  border: 1px solid $color-default-white;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: all $trans-default;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        color: $color-black-pearl;
+        background-color: $color-default-white;
+      }
+    }
+
+    &.focus-visible:focus {
+      color: rgba($color-default-white, 0.5);
+      background-color: transparent;
+    }
+  }
+}
+
+.header__mail-text,
+.header__phone-text {
+  @include vp-1023 {
+    display: none;
+  }
+}

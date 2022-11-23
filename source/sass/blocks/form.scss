@@ -1,0 +1,292 @@
+.form {
+  position: relative;
+  padding-top: 166px;
+  padding-bottom: 246px;
+  background-color: $color-deep-sky-blue-2;
+
+  &::before {
+    position: absolute;
+    content: "";
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background: #026593;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 45px;
+    padding-bottom: 129px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 88px;
+  }
+}
+
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  max-width: 1222px;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    display: block;
+    margin-left: 26px;
+  }
+
+  @include vp-767 {
+    margin-left: 17px;
+    margin-right: 18px;
+  }
+}
+
+.form__image {
+  align-self: center;
+  z-index: 2;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.form__text {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+
+  font-family: $ff-title;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-white;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.form__description {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-white;
+
+  @include vp-1023 {
+    margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.form__user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  width: 100%;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form__user textarea {
+  grid-column: 1 / -1;
+  padding-top: 25px;
+  padding-left: 15px;
+  margin-bottom: 35px;
+  min-height: 155px;
+
+  @include vp-1023 {
+    padding-top: 33px;
+  }
+
+  @include vp-767 {
+    min-height: 185px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.form__user textarea,
+.form__user input {
+  width: 100%;
+  color: $color-white;
+
+  border: none;
+  background-color: rgba(4, 20, 39, 0.15);
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        background-color: rgba(4, 20, 39, 0.3);
+      }
+    }
+
+    &.focus-visible:focus {
+      background-color: rgba(4, 20, 39, 0.45);
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      background-color: rgba(4, 20, 39, 0.3);
+      box-shadow: inset 1px 1px 3px 3px $color-default-white;
+    }
+  }
+}
+
+.form__user input {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.form__user input::placeholder,
+.form__user textarea::placeholder {
+  color: $color-white;
+}
+
+.form__user button[type="submit"] {
+  padding: 12px 0;
+  width: 100%;
+  align-self: center;
+
+  font-family: $ff-title;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: $color-white;
+  text-transform: uppercase;
+
+  background-color: $color-black-pearl;
+  border-radius: 3px;
+
+  @include vp-1023 {
+    max-width: 266px;
+    padding-bottom: 10px;
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        background-color: rgba($color-black-pearl, 0.3);
+      }
+    }
+
+    &.focus-visible:focus {
+      background-color: rgba($color-black-pearl, 0.45);
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      background-color: rgba($color-black-pearl, 0.6);
+    }
+  }
+}
+
+.form__agree-wrapper {
+  @include vp-1023 {
+    margin-top: -10px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.form__agree-text {
+  display: block;
+  padding-left: 30px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-white;
+
+  @include vp-1023 {
+    padding-left: 23px;
+  }
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
+}
+
+.form__user input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.form__user span {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 6px;
+
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-white;
+
+    @include vp-1023 {
+      top: 8px;
+      left: -3px;
+    }
+
+    @include vp-767 {
+      left: 4px;
+    }
+  }
+}
+
+.form__user input[type="checkbox"]:checked ~ span {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 11px;
+    left: 8px;
+
+    width: 7px;
+    height: 6px;
+
+    background-image: url("../img/svg/checkbox.svg");
+
+    @include vp-1023 {
+      top: 12px;
+      left: 0;
+    }
+
+    @include vp-767 {
+      left: 8px;
+    }
+  }
+}
+
+.form__user input[type="checkbox"]:hover + span,
+.form__user input[type="checkbox"]:focus + span {
+  &::before {
+    border: 1px solid $color-black-pearl;
+  }
+}

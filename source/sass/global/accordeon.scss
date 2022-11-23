@@ -1,0 +1,25 @@
+.accordion-body {
+  @include vp-767 {
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.accordion-section--opened .accordion-body {
+  height: 100%;
+}
+
+.accordion-section {
+  @include vp-767 {
+    position: relative;
+  }
+}
+
+.accordion-section--opened .footer__nav-button,
+.accordion-section--opened .footer__contacts-button {
+  @include vp-767 {
+    &::before {
+      display: none;
+    }
+  }
+}

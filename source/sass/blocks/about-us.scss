@@ -1,0 +1,147 @@
+.about-us__wrapper {
+  position: relative;
+
+  max-width: 1222px;
+  min-height: 240px;
+  margin: 0 auto;
+  padding-left: 250px;
+  margin-bottom: 115px;
+
+  @include vp-1023 {
+    padding-left: 200px;
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-left: 16px;
+    margin-bottom: 77px;
+  }
+}
+
+.about-us__year {
+  position: absolute;
+  top: 52px;
+  left: -65px;
+
+  font-family: $ff-title;
+  font-size: 156px;
+  line-height: 220px;
+  font-weight: 700;
+  color: transparent;
+  transform: rotate(-90deg);
+  background-image: url("../img/bg-year.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+
+  @include vp-1023 {
+    top: 56px;
+    left: -45px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+
+  font-family: $ff-title;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about-us__text {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about-us__text-wrapper--is-open {
+  height: fit-content;
+}
+
+.about-us__text-wrapper--is-close {
+  height: 170px;
+  overflow: hidden;
+
+  @include vp-1023 {
+    height: 280px;
+  }
+
+  @include vp-767 {
+    height: 226px;
+  }
+}
+
+.about-us__text--no-bottom {
+  margin-bottom: 0;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.about-us__button {
+  min-width: 180px;
+  padding: 14px 14px 14px 12px;
+  margin-top: 20px;
+
+  font-family: $ff-title;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-deep-sky-blue;
+  text-transform: uppercase;
+
+  border-radius: 3px;
+  border: 1px solid $color-deep-sky-blue;
+  transition: background-color $trans-default;
+
+  @include vp-1023 {
+    margin-top: -4px;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    padding: 8px 15px 12px 15px;
+
+    font-weight: 700;
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        color: $color-silver;
+        background-color: $color-deep-sky-blue;
+      }
+    }
+
+    &.focus-visible:focus {
+      color: $color-default-white;
+      background-color: rgba($color-deep-sky-blue, 0.6);
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      background-color: rgba($color-deep-sky-blue, 0.3);
+    }
+  }
+}
