@@ -14,8 +14,9 @@
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 7px;
     margin-left: 26px;
+    padding-top: 48px;
   }
 
   @include vp-767 {
@@ -37,11 +38,11 @@
   @include vp-767 {
     flex-direction: column;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 13px;
   }
 }
 
-.footer__inner-wrapper,
+// .footer__inner-wrapper,
 .footer__navigation-wrapper,
 .footer__contacts-wrapper {
   @include vp-767 {
@@ -50,10 +51,26 @@
     &::after {
       position: absolute;
       content: "";
-      width: calc(100vw - (100vw - 280px) / 2 * (-1));
+      width: calc(100vw - (100vw - 304px) / 2 * (-1));
       height: 1px;
       bottom: 0;
-      left: calc((100vw - 220px) / 2 * (-1));
+      left: calc((100vw - 270px) / 2 * (-1));
+      background-color: rgba(248, 253, 255, 0.7);
+    }
+  }
+}
+
+.footer__navigation-wrapper {
+  @include vp-767 {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100vw - (100vw - 304px) / 2 * (-1));
+      height: 1px;
+      top: -25px;
+      left: calc((100vw - 270px) / 2 * (-1));
       background-color: rgba(248, 253, 255, 0.7);
     }
   }
@@ -61,16 +78,17 @@
 
 .footer__link {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
+    margin-left: -10px;
   }
 }
 
 .footer__navigation,
 .footer__contacts {
-  padding-top: 8px;
+  padding-top: 16px;
 
   @include vp-767 {
     width: 100%;
@@ -99,11 +117,11 @@
   display: flex;
 
   @include vp-1023 {
-    padding-top: 10px;
-    margin-right: 0;
+    margin-right: 14px;
   }
 
   @include vp-767 {
+    margin-right: 0;
     padding-top: 0;
     justify-content: center;
   }
@@ -122,6 +140,7 @@
 }
 
 .footer__socials-link {
+  display: block;
   padding: 10px;
 }
 
@@ -224,37 +243,49 @@
 }
 
 p.footer__contacts-address {
-  font-size: 14px;
-  line-height: 19px;
-  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 5px;
 }
 
-p.footer__contacts-phone {
+a.footer__contacts-phone {
+  display: block;
   margin-bottom: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 25px;
+  font-style: normal;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer__nav-button,
 .footer__contacts-button {
-  position: absolute;
-  top: -10px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
+  display: none;
 
-  &::after,
-  &::before {
+  @include vp-767 {
+    display: block;
     position: absolute;
-    content: "";
-    top: 10px;
-    right: 5px;
-    width: 15px;
-    height: 1px;
-    background-color: $color-silver;
-  }
+    top: -10px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
 
-  &::before {
-    transform: rotate(90deg);
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      right: 5px;
+      width: 15px;
+      height: 1px;
+      background-color: $color-silver;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
   }
 }

@@ -1,9 +1,17 @@
 .header {
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
 
   background: linear-gradient(#041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
 }
 
 .header__wrapper {
@@ -11,7 +19,7 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 9px 35px 9px;
+  padding: 28px 9px 35px 9px;
   max-width: 1240px;
 
   @include vp-1023 {
@@ -19,7 +27,8 @@
   }
 
   @include vp-767 {
-    padding: 16px 44px 16px 18px;
+    max-width: 769px;
+    padding: 16px 16px 16px 18px;
   }
 }
 
@@ -27,10 +36,6 @@
   @include vp-767 {
     display: none;
   }
-}
-
-.header__link {
-  cursor: pointer;
 }
 
 .header__image-mobile {
@@ -46,11 +51,14 @@
   justify-content: space-between;
   align-items: center;
   min-width: calc(480 / 1222 * 100%);
+  padding-left: 10px;
 
   @include vp-1023 {
     display: block;
     min-width: auto;
     width: 100px;
+    padding-left: 0;
+    margin-top: -15px;
   }
 }
 
@@ -80,6 +88,11 @@
   }
 }
 
+.header__mail svg,
+.header__phone svg {
+  vertical-align: middle;
+}
+
 .header__mail {
   min-width: 135px;
   margin-right: 10px;
@@ -91,6 +104,11 @@
 
 .header__phone {
   min-width: 227px;
+  padding-left: 8px;
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
 }
 
 .header__button {

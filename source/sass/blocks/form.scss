@@ -21,7 +21,7 @@
 
   @include vp-1023 {
     padding-top: 45px;
-    padding-bottom: 129px;
+    padding-bottom: 126px;
   }
 
   @include vp-767 {
@@ -33,7 +33,7 @@
 .form__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 35px;
   max-width: 1222px;
   margin: 0 auto;
 
@@ -51,6 +51,7 @@
 .form__image {
   align-self: center;
   z-index: 2;
+  margin-top: 18px;
 
   @include vp-1023 {
     display: none;
@@ -95,10 +96,15 @@
 }
 
 .form__user {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
-  width: 100%;
+  max-width: 580px;
+
+  @include vp-1023 {
+    max-width: 670px;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -109,17 +115,18 @@
   grid-column: 1 / -1;
   padding-top: 25px;
   padding-left: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   min-height: 155px;
 
   @include vp-1023 {
     padding-top: 33px;
+    margin-bottom: 38px;
   }
 
   @include vp-767 {
-    min-height: 185px;
+    min-height: 180px;
     margin-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 24px;
   }
 }
 
@@ -153,7 +160,7 @@
 
 .form__user input {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .form__user input::placeholder,
@@ -165,6 +172,8 @@
   padding: 12px 0;
   width: 100%;
   align-self: center;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 
   font-family: $ff-title;
   font-size: 16px;
@@ -180,6 +189,10 @@
   @include vp-1023 {
     max-width: 266px;
     padding-bottom: 10px;
+  }
+
+  @include vp-767 {
+    grid-row: 4 / 5;
   }
 
   @include hover-focus {
@@ -202,8 +215,10 @@
 }
 
 .form__agree-wrapper {
+  position: relative;
+
   @include vp-1023 {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 
   @include vp-767 {
@@ -289,4 +304,23 @@
   &::before {
     border: 1px solid $color-black-pearl;
   }
+}
+
+span[data-error=""] {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+
+  color: $color-torch-red;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+
+  &::before {
+    display: none;
+  }
+}
+
+form .error {
+  outline: 1px solid $color-torch-red;
 }
