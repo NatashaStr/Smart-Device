@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="./webmanifest">
+  <link rel="manifest" href="./webmanifest" crossorigin="use-credentials">
   <link rel="mask-icon" href="./img/favicons//safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
@@ -49,6 +49,7 @@
 
           </address>
           <button class="header__button" data-open-modal="feedback">Заказать звонок</button>
+
         </div>
       </div>
     </header>
@@ -191,37 +192,19 @@
             <p class="catalog__text">Smart Device предлагает следующие товары и&nbsp;услуги</p>
             <p class="catalog__text-mobile">Товары и&nbsp;услуги<br> Smart Device</p>
             <ul class="catalog__list">
-              <li class="catalog__item">
-                <a href="#" class="catalog__link">
-                  <p class="catalog__item-title">Производство печатных плат</p>
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-1.webp 1x, ./img/bg-card-mobile-1@2x.webp 2x">
-                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-1.webp 1x, ./img/bg-card-tablet-1@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-1.webp 1x, ./img/bg-card-1@2x.webp 2x">
-                    <img class="catalog__image" src="./img/bg-card-1.jpg" srcset="./img/bg-card-1@2x.jpg 2x" width="350" height="650" alt="">
-                  </picture>
+              <li class="catalog__item catalog__item--make">
+                <a href="#" class="catalog__link" onclick="return false;">
+                  <h3 class="catalog__item-title">Производство печатных плат</h3>
                 </a>
               </li>
-              <li class="catalog__item">
-                <a href="#" class="catalog__link">
-                  <p class="catalog__item-title">Монтаж печатных плат</p>
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-2.webp 1x, ./img/bg-card-mobile-2@2x.webp 2x">
-                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-2.webp 1x, ./img/bg-card-tablet-2@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-2.webp 1x, ./img/bg-card-2@2x.webp 2x">
-                    <img class="catalog__image" src="./img/bg-card-2.jpg" srcset="./img/bg-card-2@2x.jpg 2x" width="350" height="650" alt="">
-                  </picture>
+              <li class="catalog__item catalog__item--assembling">
+                <a href="#" class="catalog__link" onclick="return false;">
+                  <h3 class="catalog__item-title">Монтаж печатных плат</h3>
                 </a>
               </li>
-              <li class="catalog__item">
-                <a href="#" class="catalog__link">
-                  <p class="catalog__item-title">Комплектующие для светотехники</p>
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="./img/bg-card-mobile-3.webp 1x, ./img/bg-card-mobile-3@2x.webp 2x">
-                    <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bg-card-tablet-3.webp 1x, ./img/bg-card-tablet-3@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bg-card-3.webp 1x, ./img/bg-card-3@2x.webp 2x">
-                    <img class="catalog__image" src="./img/bg-card-3.jpg" srcset="./img/bg-card-2@2x.jpg 2x" width="350" height="650" alt="">
-                  </picture>
+              <li class="catalog__item catalog__item--accessories">
+                <a href="#" class="catalog__link" onclick="return false;">
+                  <h3 class="catalog__item-title">Комплектующие для светотехники</h3>
                 </a>
               </li>
             </ul>
@@ -237,21 +220,22 @@
             <div class="form__user-wrapper">
               <p class="form__text">Остались вопросы? Задайте их&nbsp;нам!</p>
               <p class="form__description">Мы&nbsp;проконсультируем Вас бесплатно</p>
-              <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
+              <form class="form__user" action="https://echo.htmlacademy.ru/" method="post">
                 <label>
-                  <input type="text" placeholder="Имя" required>
+                  <input type="text" name="name" placeholder="Имя" required>
                 </label>
                 <label>
-                  <input type="tel" placeholder="Телефон" required>
+                  <input type="tel" name="phone" placeholder="Телефон" data-js="phone-number" required>
                 </label>
-                <textarea placeholder="Ваш вопрос"></textarea>
-                <button class="form__button" type="submit">Задать вопрос</button>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
                 <div class="form__agree-wrapper">
                   <label for="agree">
                     <input type="checkbox" id="agree" required checked>
                     <span class="form__agree-text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                   </label>
                 </div>
+                <span class="form__error-text" data-error=""></span>
+                <button class="form__button" type="submit">Задать вопрос</button>
               </form>
             </div>
           </div>
@@ -263,13 +247,13 @@
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer__inner-wrapper">
-            <a class="footer__link" href="#">
+            <a class="footer__link">
               <img class="footer__image" src="./img/svg/logo-tablet.svg" width="215" height="55"
                 alt="Логотип магазина Смарт Девайс">
             </a>
             <ul class="footer__socials-list">
               <li class="footer__socials-item">
-                <a class="footer__socials-link" href="#">
+                <a class="footer__socials-link" href="#" onclick="return false;">
                   <svg width="30" height="30" role="img">
                     <use href="./img/sprite_auto.svg#ok"></use>
                   </svg>
@@ -277,7 +261,7 @@
                 </a>
               </li>
               <li class="footer__socials-item">
-                <a class="footer__socials-link" href="#">
+                <a class="footer__socials-link" href="#" onclick="return false;">
                   <svg width="30" height="30" role="img">
                     <use href="./img/sprite_auto.svg#vk"></use>
                   </svg>
@@ -285,7 +269,7 @@
                 </a>
               </li>
               <li class="footer__socials-item">
-                <a class="footer__socials-link" href="#">
+                <a class="footer__socials-link" href="#" onclick="return false;">
                   <svg width="30" height="30" role="img">
                     <use href="./img/sprite_auto.svg#pinterest"></use>
                   </svg>
@@ -300,25 +284,25 @@
               <button class="footer__nav-button" type="button"></button>
               <ul class="footer__nav-list accordion-body">
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">О&nbsp;Компании</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">О&nbsp;Компании</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Продукты</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Продукты</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Производство печатных<br> плат</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Производство печатных<br> плат</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Монтаж печатных плат</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Комплектующие</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Комплектующие</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Доставка</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Доставка</a>
                 </li>
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="#">Контакты</a>
+                  <a class="footer__nav-link" href="#" onclick="return false;">Контакты</a>
                 </li>
               </ul>
 
@@ -330,9 +314,9 @@
               <button class="footer__contacts-button" type="button"></button>
               <address class="footer__contacts-address-wrapper accordion-body">
                 <p class="footer__contacts-address">г. Мытищи, Олимпийский проспект,<br> д.10</p>
-                <p class="footer__contacts-phone">+7 (495) 589-40-50</p>
-                <p class="footer__contacts-phone">+7 (925) 389-58-29</p>
-                <p class="footer__contacts-phone">+7 (925) 364-78-13</p>
+                <a class="footer__contacts-phone" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                <a class="footer__contacts-phone" href="tel:+79253895829">+7 (925) 389-58-29</a>
+                <a class="footer__contacts-phone" href="tel:+79253647813">+7 (925) 364-78-13</a>
               </address>
             </div>
           </div>
@@ -342,31 +326,33 @@
   </div>
 
   <!-- Модалки -->
+
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
         <p class="modal__description">Закажите звонок</p>
         <p class="modal__text">Оставьте контакты, мы&nbsp;проконсультируем<br> вас бесплатно в удобное время</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
-        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
           <label>
-            <input type="text" placeholder="Имя" name="name" tabindex="0" autofocus>
+            <input type="text" placeholder="Имя" name="name" data-focus required>
           </label>
           <label>
-            <input type="tel" placeholder="Телефон" name="tel">
+            <input type="tel" placeholder="Телефон" name="tel" id="tel" data-js="phone-number" required>
           </label>
-          <textarea>Ваш вопрос</textarea>
-          <button type="submit">Отправить</button>
+          <textarea name="question" placeholder="Ваш вопрос"></textarea>
+          <button type="submit" id="submit">Отправить</button>
+          <span class="form__error-text" data-error-modal=""></span>
           <label for="agreement">
             <input type="checkbox" id="agreement" required checked>
             <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
           </label>
         </form>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite_auto.svg#close"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -374,4 +360,5 @@
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
