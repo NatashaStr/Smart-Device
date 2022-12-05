@@ -99,10 +99,11 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 38px;
   max-width: 580px;
 
   @include vp-1023 {
+    column-gap: 30px;
     max-width: 670px;
   }
 
@@ -169,7 +170,7 @@
 }
 
 .form__user button[type="submit"] {
-  padding: 12px 0;
+  padding: 15px 0 10px;
   width: 100%;
   align-self: center;
   grid-column: 1 / 2;
@@ -183,8 +184,10 @@
   color: $color-white;
   text-transform: uppercase;
 
+  border: none;
   background-color: $color-black-pearl;
   border-radius: 3px;
+  cursor: pointer;
 
   @include vp-1023 {
     max-width: 266px;
@@ -247,6 +250,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: transparent;
 
   padding: 0;
   margin-bottom: 0;
@@ -254,6 +258,7 @@
 
 .form__user span {
   position: relative;
+  cursor: pointer;
 
   &::before {
     position: absolute;

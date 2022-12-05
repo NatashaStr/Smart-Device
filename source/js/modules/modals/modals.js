@@ -135,7 +135,6 @@ export class Modals {
 
   open(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-    const input = document.querySelector('input[name="name"]');
 
     if (!modal || modal.classList.contains('is-active')) {
       return;
@@ -169,7 +168,6 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
-      input.focus();
     }, this._eventTimeout);
   }
 

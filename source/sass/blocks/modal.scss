@@ -185,6 +185,7 @@
 
   background-color: $color-black-pearl;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .modal__form label:last-of-type {
@@ -206,6 +207,7 @@
 
 .modal__form span {
   position: relative;
+  cursor: pointer;
 
   &::before {
     position: absolute;

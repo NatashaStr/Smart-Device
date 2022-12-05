@@ -39,7 +39,6 @@
   }
 
   @include vp-1023 {
-    // width: 320px;
     min-height: 360px;
     padding: 90px 45px 30px 40px;
   }
@@ -100,7 +99,12 @@
 }
 
 .advantages__item:nth-child(4n) {
+  @include vp-1023 {
+    padding-top: 85px;
+  }
+
   @include vp-767 {
+    padding-top: 78px;
     padding-right: 48px;
     padding-bottom: 63px;
   }

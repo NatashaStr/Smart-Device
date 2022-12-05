@@ -1,10 +1,16 @@
 .header {
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
 
   background: linear-gradient(#041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
+  @include vp-1023 {
+    position: static;
+    max-height: 100px;
+  }
 }
 
 .header--fixed {
@@ -48,6 +54,7 @@
 
 .header__address {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-width: calc(480 / 1222 * 100%);
